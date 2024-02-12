@@ -29,7 +29,7 @@ export function Header() {
 				<a href='#'>Careers</a>
 				<a href='#'>Community</a>
 			</nav>
-			<header className='mb-16 flex items-center justify-between'>
+			<header className='mb-16 mt-16 flex items-center justify-between px-4 lg:px-16 xl:px-40'>
 				<img src={Logo} alt='Manage' className='z-10' />
 				<nav className='hidden gap-4 font-semibold text-primary-darkBlue md:flex lg:gap-8'>
 					<a href='#'>Princing</a>

@@ -9,3 +9,44 @@
 		@apply text-balance text-4xl font-bold text-primary-darkBlue lg:text-5xl xl:text-6xl;
 	}
 }
+
+:root {
+	--swiper-pagination-bullet-inactive-color: '#fff';
+	--swiper-pagination-bullet-inactive-opacity: 1;
+	--swiper-pagination-color: hsl(12, 88%, 59%);
+}
+
+.swiper-container {
+	width: 480px;
+}
+
+.swiper-pagination {
+	position: static;
+	margin-top: 32px;
+}
+
+.swiper-pagination-bullet {
+	border: 1px solid hsl(12, 88%, 59%);
+}
+
+@media screen and (min-width: 1024px) {
+	.swiper-container {
+		width: 1024px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.swiper-container {
+		width: 768px;
+	}
+}
+
+@media screen and (min-width: 640px) {
+	.swiper-container {
+		width: 640px;
+	}
+
+	.swiper-pagination {
+		display: none;
+	}
+}

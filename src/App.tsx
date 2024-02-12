@@ -1,13 +1,14 @@
 import { Button } from './components/Button'
+import { FeedbackSection } from './components/FeedbackSection'
 import { Header } from './components/Header'
 import './index.css'
 
 function App() {
 	return (
-		<main className='px-4 py-8 font-be-vietnam-pro text-neutral-darkGrayishBlue lg:px-16 lg:py-16 xl:px-40 xl:py-16'>
+		<main className=' font-be-vietnam-pro text-neutral-darkGrayishBlue '>
 			<div className='fixed -top-1/3 left-14 right-0 -z-10 hidden h-full w-full bg-tablet-pattern bg-cover bg-no-repeat'></div>
 			<Header />
-			<div className='space-y-16'>
+			<div className='space-y-16 px-4 py-8 lg:px-16 lg:py-16 xl:px-40'>
 				<section className='grid items-center md:grid-cols-2'>
 					<img
 						src='/manage-landpage/images/illustration-intro.svg'
@@ -84,6 +85,34 @@ function App() {
 					</section>
 				</div>
 			</div>
+			<FeedbackSection
+				feedbacks={[
+					{
+						author: 'Anisha Li',
+						avatarUrl: '/manage-landpage/images/avatar-ali.png',
+						quote:
+							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
+					},
+					{
+						author: 'Anisha Li',
+						avatarUrl: '/manage-landpage/images/avatar-anisha.png',
+						quote:
+							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
+					},
+					{
+						author: 'Anisha Li',
+						avatarUrl: '/manage-landpage/images/avatar-richard.png',
+						quote:
+							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
+					},
+					{
+						author: 'Anisha Li',
+						avatarUrl: '/manage-landpage/images/avatar-richard.png',
+						quote:
+							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
+					},
+				]}
+			/>
 		</main>
 	)
 }
