@@ -18,7 +18,7 @@ export function Button(
 	const { type, children, className, ...rest } = props
 
 	const defaultStyle =
-		'block w-fit rounded-full bg-primary-brightRed px-4 py-3 text-white mx-auto'
+		'block w-fit rounded-full font-semibold bg-primary-brightRed px-4 py-3 text-white mx-auto'
 
 	const mergedClassName = twMerge(defaultStyle, className)
 

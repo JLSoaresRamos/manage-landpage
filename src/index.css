@@ -16,6 +16,14 @@
 	--swiper-pagination-color: hsl(12, 88%, 59%);
 }
 
+html,
+body {
+	overflow-x: hidden;
+}
+body {
+	position: relative;
+}
+
 .swiper-container {
 	width: 480px;
 }

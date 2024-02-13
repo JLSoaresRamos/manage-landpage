@@ -21,7 +21,7 @@ export function Header() {
 				className={`fixed inset-0 h-screen bg-gradient-to-t from-neutral-800 to-neutral-veryLightGray opacity-50 md:hidden ${openMobileDropDown ? 'block' : 'hidden'}`}
 			></div>
 			<nav
-				className={`${openMobileDropDown ? 'absolute' : 'hidden'} left-1/2 top-14 flex w-[90vw] -translate-x-1/2 transform flex-col items-center gap-4 bg-white p-8 font-bold text-primary-darkBlue md:hidden`}
+				className={`${openMobileDropDown ? 'absolute' : 'hidden'} left-1/2 top-28 flex w-[90vw] -translate-x-1/2 transform flex-col items-center gap-4 bg-white p-8 font-bold text-primary-darkBlue md:hidden`}
 			>
 				<a href='#'>Princing</a>
 				<a href='#'>Product</a>

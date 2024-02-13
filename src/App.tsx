@@ -1,12 +1,16 @@
 import { Button } from './components/Button'
 import { FeedbackSection } from './components/FeedbackSection'
+import { Footer } from './components/Footer'
 import { Header } from './components/Header'
 import './index.css'
 
 function App() {
 	return (
 		<main className=' font-be-vietnam-pro text-neutral-darkGrayishBlue '>
-			<div className='fixed -top-1/3 left-14 right-0 -z-10 hidden h-full w-full bg-tablet-pattern bg-cover bg-no-repeat'></div>
+			<div className='relative -z-20'>
+				<div className='absolute -right-7 -top-20 -z-10 h-96 w-96 bg-tablet-pattern bg-cover bg-no-repeat lg:-top-32 lg:h-[600px] lg:w-[600px]'></div>
+				<div className='absolute -left-56 top-[1000px] hidden h-[450px] w-[450px] bg-tablet-pattern bg-cover bg-no-repeat lg:block'></div>
+			</div>
 			<Header />
 			<div className='space-y-16 px-4 py-8 lg:px-16 lg:py-16 xl:px-40'>
 				<section className='grid items-center md:grid-cols-2'>
@@ -113,6 +117,19 @@ function App() {
 					},
 				]}
 			/>
+			<section className='bg-simplify-section-mobile md:bg-simplify-section-desktop relative mt-16 items-center justify-center space-y-8 bg-primary-brightRed bg-no-repeat px-4 py-16 text-white md:flex md:grid-cols-2 md:space-y-0 md:px-10 lg:py-16 xl:px-40'>
+				<h2 className='title text-balance text-center text-white md:w-fit md:text-left'>
+					Simplify how your team works today.
+				</h2>
+				<Button
+					type='link'
+					href='#'
+					className='flex h-12 w-fit flex-shrink-0 items-center justify-center bg-neutral-veryLightGray px-5 text-primary-brightRed'
+				>
+					Get Started
+				</Button>
+			</section>
+			<Footer />
 		</main>
 	)
 }

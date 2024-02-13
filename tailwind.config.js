@@ -6,6 +6,10 @@ export default {
 			backgroundImage: {
 				'tablet-pattern':
 					"url('/manage-landpage/images/bg-tablet-pattern.svg')",
+				'simplify-section-desktop':
+					"url('/manage-landpage/images/bg-simplify-section-desktop.svg')",
+				'simplify-section-mobile':
+					"url('/manage-landpage/images/bg-simplify-section-mobile.svg')",
 			},
 			colors: {
 				primary: {
