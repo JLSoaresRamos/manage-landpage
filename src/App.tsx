@@ -2,6 +2,9 @@ import { Button } from './components/Button'
 import { FeedbackSection } from './components/FeedbackSection'
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+
+import { FeedbackData } from './data'
+
 import './index.css'
 
 function App() {
@@ -89,34 +92,7 @@ function App() {
 					</section>
 				</div>
 			</div>
-			<FeedbackSection
-				feedbacks={[
-					{
-						author: 'Anisha Li',
-						avatarUrl: '/manage-landpage/images/avatar-ali.png',
-						quote:
-							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
-					},
-					{
-						author: 'Anisha Li',
-						avatarUrl: '/manage-landpage/images/avatar-anisha.png',
-						quote:
-							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
-					},
-					{
-						author: 'Anisha Li',
-						avatarUrl: '/manage-landpage/images/avatar-richard.png',
-						quote:
-							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
-					},
-					{
-						author: 'Anisha Li',
-						avatarUrl: '/manage-landpage/images/avatar-richard.png',
-						quote:
-							'“Manage has supercharged our team’s workflow. The ability to maintain visibility on larger milestones at all times keeps everyone motivated.” ',
-					},
-				]}
-			/>
+			<FeedbackSection feedbacks={FeedbackData} />
 			<section className='bg-simplify-section-mobile md:bg-simplify-section-desktop relative mt-16 items-center justify-center space-y-8 bg-primary-brightRed bg-no-repeat px-4 py-16 text-white md:flex md:grid-cols-2 md:space-y-0 md:px-10 lg:py-16 xl:px-40'>
 				<h2 className='title text-balance text-center text-white md:w-fit md:text-left'>
 					Simplify how your team works today.

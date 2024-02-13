@@ -7,7 +7,7 @@ import { Pagination } from 'swiper/modules'
 
 import { Button } from '../Button'
 
-type FeedbackProps = {
+export type FeedbackProps = {
 	avatarUrl: string
 	author: string
 	quote: string
