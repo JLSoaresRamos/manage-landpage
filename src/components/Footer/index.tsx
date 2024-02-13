@@ -1,3 +1,4 @@
+import { FormEvent, useState } from 'react'
 import { Button } from '../Button'
 
 import {
@@ -9,6 +10,21 @@ import {
 } from 'react-icons/fa'
 
 export function Footer() {
+	const [emailValue, setEmailValue] = useState('')
+	const [validEmail, setValidEmail] = useState<null | boolean>(null)
+
+	function handleValidation(e: React.MouseEvent<HTMLElement>) {
+		if (emailValue.includes('@')) {
+			setValidEmail(true)
+		} else {
+			setValidEmail(false)
+			e.preventDefault()
+		}
+	}
+
+	console.log(emailValue)
+	console.log(validEmail !== null)
+
 	return (
 		<footer className='flex flex-col items-center justify-center gap-8 bg-neutral-veryDarkBlue px-4 py-8 text-neutral-400 lg:flex-row lg:justify-between lg:px-16 lg:py-16 xl:px-40'>
 			<div className='order-3 flex flex-col gap-8 lg:order-first lg:gap-16'>
@@ -59,17 +75,30 @@ export function Footer() {
 				</div>
 			</nav>
 			<div className='flex flex-col lg:gap-16'>
-				<form className='flex w-full gap-2'>
-					<input
-						type='text'
-						name='email'
-						id='email'
-						className='w-full rounded-full px-4'
-						placeholder='Updates in your inbox...'
-					/>
-					<Button type='button' className='px-6 py-2'>
-						Go
-					</Button>
+				<form>
+					<div className='flex w-full gap-2'>
+						<input
+							type='text'
+							name='email'
+							id='email'
+							className={`w-full rounded-full px-4 ${validEmail === false && validEmail !== null && 'border-1 border-red-400'}`}
+							placeholder='Updates in your inbox...'
+							onChange={(e) => setEmailValue(e.target.value)}
+							value={emailValue}
+						/>
+						<Button
+							type='button'
+							className='px-6 py-2'
+							onClick={(e) => handleValidation(e)}
+						>
+							Go
+						</Button>
+					</div>
+					<p
+						className={`${validEmail === false && validEmail !== null ? 'block' : 'hidden'}  text-red-400`}
+					>
+						Please insert a valid email
+					</p>
 				</form>
 				<p className='hidden lg:block lg:text-right'>
 					Copyright 2024. All Rights Reserved
