@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react'
+import { useState } from 'react'
 import { Button } from '../Button'
 
 import {
@@ -21,9 +21,6 @@ export function Footer() {
 			e.preventDefault()
 		}
 	}
-
-	console.log(emailValue)
-	console.log(validEmail !== null)
 
 	return (
 		<footer className='flex flex-col items-center justify-center gap-8 bg-neutral-veryDarkBlue px-4 py-8 text-neutral-400 lg:flex-row lg:justify-between lg:px-16 lg:py-16 xl:px-40'>
